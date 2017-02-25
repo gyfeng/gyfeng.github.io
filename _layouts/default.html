@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart=""
+      style="background-image: url('{{ site.baseurl }}/{% if page.body-bg-img %}{{ page.body-bg-img }}{% else %}{{ site.body-bg-img }}{% endif %}')">
+
+    {% include nav.html %}
+
+    {{ content }}
+
+    {% include footer.html %}
+
+</body>
+
+</html>
