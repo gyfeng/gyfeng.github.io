@@ -43,12 +43,18 @@ tags:
 ![主题选择](/img/in-post/hello-codedoge/github-theme-choose.png)
 ## 从Hello World开始
 &#8195;&#8195;不如俗套一把，就从Hello World开始吧。
-1. 首先把username.github.io仓库clone到本地：  
-`git clone https://github.com/username/username.github.io.git`
-2. 进入工作目录：  
-`cd username.github.io`
-3. 修改首页文件：  
-`echo "Hello World" > index.html`
+1. 首先把username.github.io仓库clone到本地：
+```
+git clone https://github.com/username/username.github.io.git
+```
+2. 进入工作目录：
+```
+cd username.github.io
+```
+3. 修改首页文件：
+```
+echo "Hello World" > index.html
+```
 4. 然后上传至GitHub。  
 &#8195;&#8195;剩下的就是打开你的Blog了。记得，多按几下Ctrl+F5(_都是猿，别问为什么_)，就可以看到熟悉的Hello World了。  
 &#8195;&#8195;什么？需要编写Html？还能不能好好的写博客了？ 别急，慢慢来嘛。
@@ -56,11 +62,31 @@ tags:
 ## Jekyll现身
 &#8195;&#8195;刚对有简单提及到`Jekyll`，没错，GitHub Pages 就是使用 [Jekyll](http://jekyllcn.com/) 将我们的各种将纯文本转换为静态页面。
 ### 安装Jekyll
-因为Jekyll是基于ruby的，所以需要先安装ruby   
-`sudo apt-get install ruby-full`  
-安装gem   
-```gem install rubygems-update```   
+因为Jekyll是基于ruby的，所以需要先安装ruby
+```
+$ sudo apt-get install ruby-full
+``` 
+安装gem
+```
+$ sudo gem install rubygems-update
+```
 安装jekyll  
-`gem install jekyll`  
+```
+$ sudo gem install jekyll bundler
+```  
+验证是否安装成功
+```
+$ jekyll -v
+jekyll 3.4.0
+```
+显示版本号即表示安装成功　　
+**_注意_：**可能有些地方网络不好，安装不成功，需要设置ruby源：
+```
+$ gem sources --remove https://rubygems.org/
+$ gem sources --add http://gems.ruby-china.org/
+$ gem sources -l
+http://gems.ruby-china.org/
+# 确保只有 gems.ruby-china.org
+```
 
 
