@@ -4,7 +4,7 @@ title:      "你好啊，代码狗！"
 subtitle:   "学会分享，才能成长"
 date:       2017-02-25 12:00:00
 author:     "CodeDoge"
-header-img: "img/in-post/hello-codedoge/header-bg.png"
+header-img: "img/in-post/20170225-hello-codedoge/header-bg.png"
 header-mask: 0.3
 catalog:    true
 tags:
@@ -37,11 +37,11 @@ tags:
 &#8195;&#8195;[GitHub Pages](https://pages.github.com/) 有两种，一种是针对用户，一种是针对单个项目的。我们选择前者。首先，我们在GitHub上创建一个命名为username.github.io的项目，当然，这里的username是指自己的用户名了。这里我自己的就是gyfeng.github.io了。  
 &#8195;&#8195;这样，就可以访问`https://username.github.io/`看看效果了，这里的`username.github.io`是GitHub免费提供为你的域名，有没有很嗨啊？GitHub提供了多种默认模板可供选择。设置方法：  
 1.&nbsp;&nbsp;进入项目设置页面  
-![GitHub设置](/img/in-post/hello-codedoge/github-project-setting.png)
+![GitHub设置](/img/in-post/20170225-hello-codedoge/github-project-setting.png)
 2.&nbsp;&nbsp;找到GitHub Pages设置，使劲戳"Choose a theme"按钮
-![主题选择](/img/in-post/hello-codedoge/github-launch-theme-chooser.png)
+![主题选择](/img/in-post/20170225-hello-codedoge/github-launch-theme-chooser.png)
 3.&nbsp;&nbsp;选择喜欢的主题吧
-![主题选择](/img/in-post/hello-codedoge/github-theme-choose.png)
+![主题选择](/img/in-post/20170225-hello-codedoge/github-theme-choose.png)
 ## 从Hello World开始
 &#8195;&#8195;不如俗套一把，就从Hello World开始吧。
 1. 首先把username.github.io仓库clone到本地：
@@ -105,7 +105,7 @@ $ jekyll new blog
 $ cd blog
 ```
 就可以看到Jeykll默认给我们生成一些初始化后的文件。如下：
-![主题选择](/img/in-post/hello-codedoge/jekyll-inti-dir.png)
+![主题选择](/img/in-post/20170225-hello-codedoge/jekyll-inti-dir.png)
 #### Jekyll目录
 一个基本的 Jekyll 网站的目录结构一般是像这样的：
 ```
@@ -119,7 +119,7 @@ $ cd blog
 |   ├── page.html
 |   └── post.html
 ├── _posts
-|   └── 2017-02-25-hello-codedoge.markdown
+|   └── 2017-02-25-20170225-hello-codedoge.markdown
 ├── _site
 └── index.html
 ```
