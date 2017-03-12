@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "你好啊，代码狗！"
-subtitle:   "学会分享，才会成长"
+subtitle:   "学会分享，才能成长"
 date:       2017-02-25 12:00:00
 author:     "CodeDoge"
 header-img: "img/in-post/hello-codedoge/header-bg.png"
