@@ -4,7 +4,7 @@ title:      "你好啊，代码狗！"
 subtitle:   "懂得分享，才会成长"
 date:       2017-02-25 12:00:00
 author:     "CodeDoge"
-header-img: "img/"
+header-img: "img/in-post/hello-codedoge/header-bg.png"
 header-mask: 0.3
 catalog:    true
 tags:
