@@ -3,7 +3,6 @@ layout:     post
 title:      "你好啊，代码狗！"
 subtitle:   "学会分享，才能成长"
 header-img: "img/in-post/20170225-hello-codedoge/header-bg.png"
-header-mask: 0.3
 catalog:    true
 tags:
     - 生活
