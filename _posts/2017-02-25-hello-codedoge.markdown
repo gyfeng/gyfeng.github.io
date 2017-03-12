@@ -9,8 +9,9 @@ header-mask: 0.3
 catalog:    true
 tags:
     - 生活
+    - 工作
 ---
-> 博客 - 程序员分享与表达自己的方式。
+> 博客 - 程序员分享与表达自己的方式。拒绝做一个假的程序猿。
 
 ## 一个假的程序猿
 &#8195;&#8195;工作以来，一直都没有好好的静下心来好好记录工作、学习或生活的状态与感悟。看着周围的同事、朋友，都有自己的专属博客，将自己的学习与感悟与大家分享，一直觉得自己就是一个假的程序猿。  
@@ -59,25 +60,34 @@ echo "Hello World" > index.html
 &#8195;&#8195;剩下的就是打开你的Blog了。记得，多按几下Ctrl+F5(_都是猿，别问为什么_)，就可以看到熟悉的Hello World了。  
 &#8195;&#8195;什么？需要编写Html？还能不能好好的写博客了？ 别急，慢慢来嘛。
 
+## 域名解析
+&#8195;&#8195;使用自己的域名来做博客，是不是比格要高一丢丢呢？　　
+说干说干啊，其实还挺简单的。两步:
+１. 在仓库根目录建立CNAME文件(注意一定要大写哦)，文件内容为个人域名，注意没有`http://`，我自己的如下：
+```
+blog.codedoge.com
+```
+２. 在阿里云上，域名解析到对应的`github.io`站点。我的当然解析到`gyfeng.github.io`咯。然后就可以通过自己的域名访问了。
+
 ## Jekyll现身
 &#8195;&#8195;刚对有简单提及到`Jekyll`，没错，GitHub Pages 就是使用 [Jekyll](http://jekyllcn.com/) 将我们的各种将纯文本转换为静态页面。
-### 安装Jekyll
+#### 安装Jekyll
 因为Jekyll是基于ruby的，所以需要先安装ruby
 ```
 $ sudo apt-get install ruby-full
-``` 
+```
 安装gem
 ```
 $ sudo gem install rubygems-update
 ```
-安装jekyll  
+安装jekyll
 ```
 $ sudo gem install jekyll bundler
-```  
+```
 验证是否安装成功
 ```
 $ jekyll -v
-jekyll 3.4.0
+jekyll 3.4.2
 ```
 显示版本号即表示安装成功　　
 **_注意_：**可能有些地方网络不好，安装不成功，需要设置ruby源：
@@ -88,5 +98,44 @@ $ gem sources -l
 http://gems.ruby-china.org/
 # 确保只有 gems.ruby-china.org
 ```
+#### 初始化Jekyll工程
+使用Jekyll初始化Blog工程。
+```
+$ jekyll new blog
+$ cd blog
+```
+就可以看到Jeykll默认给我们生成一些初始化后的文件。如下：
+![主题选择](/img/in-post/hello-codedoge/jekyll-inti-dir.png)
+#### Jekyll目录
+一个基本的 Jekyll 网站的目录结构一般是像这样的：
+```
+.
+├── _config.yml
+├── _includes
+|   ├── footer.html
+|   └── header.html
+├── _layouts
+|   ├── default.html
+|   ├── page.html
+|   └── post.html
+├── _posts
+|   └── 2017-02-25-hello-codedoge.markdown
+├── _site
+└── index.html
+```
+大致功能如下:
 
+| 目录/文件 | 说明 |
+|--------|--------|
+|  _config.yml　 |  保存网站的全局配置数据   |
+|  _includes　 |  可以理解为公共的模块文件，可以使用标签`{ % include file.ext % }`来把文件`_includes/file.ext`包含进来。  |
+|  _layouts　 |  这个就比较重要了，主要保存模板布局，在文章中的可以在YAML头信息中选择相应的模板  |
+|  _posts |  这个就是文章目录了，注意要符合markdown格式哦  |
+|  _site |  该目录是jekyll生成的站点目录，一般不用管  |
+|  index.html |  首页  |
 
+更多说明请参见[Jekyll网站](http://jekyllcn.com/)。Jekyll的可定制性很强，可以随心所欲地定制自己的博客了。
+
+## 结语
+&#8195;&#8195;使用GitHub Pages + Jekyll　终于把博客搭建起来了，但这只是万里长征第一步，更重要的是持之以恒。  
+&#8195;&#8195;感谢 [Hux](https://huangxuan.me/) 提供博客模板。
