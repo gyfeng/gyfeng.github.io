@@ -12,6 +12,8 @@ baseurl: ""                             # for example, '/blog' if your blog host
 # 作者信息
 author: CodeDoge
 
+header-mask: 0.3
+
 # SNS settings
 RSS: true
 weibo_username:     codedoge
