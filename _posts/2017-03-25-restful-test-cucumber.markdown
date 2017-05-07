@@ -7,6 +7,7 @@ header-mask: 0.3
 catalog:    true
 tags:
     - RESTful
+    - Spring
     - SpringMVC
     - 单元测试
     - Cucumber
