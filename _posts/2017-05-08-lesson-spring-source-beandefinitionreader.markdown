@@ -7,7 +7,6 @@ header-mask: 0.2
 catalog:    true
 tags:
     - Spring
-    - BeanDefinitionReader
 ---
 > 上篇笔记学习了[Spring Ioc容器的结构体系](http://blog.codedoge.com/2017/05/07/lesson-spring-source-ioc/)，了解了Spring中BeanFactory、Registry、BeanDefinitionReader的作用。今天，将学习了解BeanDefinitionReader是如何将bean定义从资源文件中加载到容器中的。
 

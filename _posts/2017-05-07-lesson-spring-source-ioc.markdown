@@ -7,7 +7,6 @@ header-mask: 0.2
 catalog:    true
 tags:
     - Spring
-    - Ioc
 ---
 > 学习Spring源码，从最基本的Ico容器开始，逐步了解Spring的整个概况。学习，是为了更大的进步。
 
