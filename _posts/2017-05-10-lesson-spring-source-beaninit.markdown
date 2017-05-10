@@ -10,7 +10,7 @@ tags:
 ---
 > 上篇笔记学习了[Spring从Xml加载Bean Definition的过程](http://blog.codedoge.com/2017/05/07/lesson-spring-source-ioc/)，了解到了Spring是如何将Xml文件中定义的Bean加载到容器中的，今天，将学习Spring是如何将BeanDefinition生成我们所需要Bean的过程。
 
-## Bean创建的入口
+## Bean创建的时机
 &#8195;&#8195;Spring不会默然自动将BeanDefinition转换我们所需要Bean，而是在调用`getBean`系列方法时再去做Bean初始化的操作，虽然这看起来有点不符合我们的认知，因为在ApplicationContext中可以把单例的Bean提前初始化，在我们手工`getBean`时就已经初始化好了，其实这是在ApplicationContext初始化时，不断调用`getBean`方法将单例的Bean进行了初始化工作，使得我们在使用的时候不用经过繁琐创建过程。  
 &#8195;&#8195;在BeanFactory中，最终所有的`getBean`方法都会调用`AbstractBeanFactory.doGetBean`方法获取，那就从该方法入手进行分析。
 ```
