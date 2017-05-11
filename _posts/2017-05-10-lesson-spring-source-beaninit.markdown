@@ -316,4 +316,4 @@ registerDisposableBeanIfNecessary(beanName, bean, mbd);
 > 7. **InitializingBean**：实现该接口后，Spring会调用其`afterPropertiesSet`方法进行Bean的额外初始化，当然，也可以指定init-method；
 > 8. **DisposableBean**：当非prototype类型的bean销毁时，会调用`destroy`，一般用于资源的释放操作。
 
-&#8195;&#8195;本节学习的Spring Bean创建知识大概就这么多。从这节中了解到了Spring创建Bean的过程，并且结合前一节的[Spring从Xml加载Bean Definition的过程](http://blog.codedoge.com/2017/05/07/lesson-spring-source-ioc/)，可以了解到BeanFactory及其实现类为整个Spring Ioc搭建了一套功能强大，扩展性非常好的骨架，已经具备Ioc的基本功能，但是一些增强型的接口还需要手工进行注册（*比如BeanPostProcessor*），使用还稍许麻烦。在此之上，Spring还提供另一个容器接口`ApplicationContext`，在ApplicationContext中简化许多操作，使得Spring Ioc更加完整和强大，在后面，将会对`ApplicationContext`进行深入学习，了解`ApplicationContext`中是如何帮助我们简化/增强功能操作的。
+&#8195;&#8195;本节学习的Spring Bean创建知识大概就这么多。从这节中了解到了Spring创建Bean的过程，并且结合前一节的[Spring从Xml加载Bean Definition的过程](http://blog.codedoge.com/2017/05/07/lesson-spring-source-ioc/)，可以了解到BeanFactory及其实现类为整个Spring Ioc搭建了一套功能强大，扩展性非常好的核心骨架，已经具备Ioc的基本功能，但是一些组件还需要手工进行注册（*比如BeanPostProcessor*），使用还稍许麻烦。在此之上，Spring还提供另一个容器接口`ApplicationContext`，在ApplicationContext中简化许多操作，默认注册了很多有用的组件，使得Spring Ioc更加完整和强大，在后面，将会对`ApplicationContext`进行深入学习，了解`ApplicationContext`中是如何帮助我们简化/增强功能操作的。

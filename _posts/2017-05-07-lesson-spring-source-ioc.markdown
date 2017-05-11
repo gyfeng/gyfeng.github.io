@@ -14,7 +14,7 @@ tags:
 &#8195;&#8195;Ioc是Spring最核心的功能，也是Spring一切功能的起点。今天，将从最基本的Ioc开始学习，逐步学习了解神秘的Spring。  
 &#8195;&#8195;XmlBeanFactory是Spring提供的最简单的Ioc容器之一，我最喜欢从简单开始了，那么现在将从XmlBeanFactory的结构体系中逐步进行分析。
 
-## XmlBeanFactory的类结构体系
+## XmlBeanFactory的类继承体系
 ![Spring XmlBeanFactory类图](/img/in-post/spring-lesson/ioc/class-XmlBeanFactory.png)
 &#8195;&#8195;在XmlBeanFactory的类图中，我们可以看到BeanFactory和AliasRegistry占据最高点。  
 &#8195;&#8195;BeanFactory定义了一系列获取Bean的方法，AliasRegistry(BeanDefinitionRegistry)提供的注册Bean的功能，而没有在类图中提到的BeanDefinitionReader则定义了从配置文件中加载Bean定义到BeanDefinitionRegistry中。三者配合，组成了Spring的核心框架。当然，具体功能还需要具体类来实现！
