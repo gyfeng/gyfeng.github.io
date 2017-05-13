@@ -9,7 +9,7 @@ tags:
     - Spring
 ---
 
-> &#8195;&#8195;前两篇笔记学习了[Spring从Xml加载Bean Definition的过程](http://blog.codedoge.com/2017/05/07/lesson-spring-source-ioc/)以及[Bean初始化过程](http://blog.codedoge.com/2017/05/10/lesson-spring-source-beaninit/)，了解到了在AbstractBeanFactory及其子类中定义了Spring Ioc的骨架，已经可以使用使用Ico的功能，但是一些特定的组件还需要手工进行注册，而在ApplicationContext中，已经将这些组件自动为我们装配好了。在《Spring 3.X企业应用开发实战》一书中，更是形象地把BeanFactory比喻为发动机，把ApplicationContext比喻为汽车，BeanFactory是核心，而ApplicationContext是在BeanFactory上组合各种组件，更强大，更易用，接下来，学习ApplicationContext的初始化过程，学习ApplicationContext是怎么在BeanFactory上进行增强的。
+> &#8195;&#8195;前两篇笔记学习了[Spring从Xml加载Bean Definition的过程](http://blog.codedoge.com/2017/05/08/lesson-spring-source-beandefinitionreader/)以及[Bean初始化过程](http://blog.codedoge.com/2017/05/10/lesson-spring-source-beaninit/)，了解到了在AbstractBeanFactory及其子类中定义了Spring Ioc的骨架，已经可以使用使用Ico的功能，但是一些特定的组件还需要手工进行注册，而在ApplicationContext中，已经将这些组件自动为我们装配好了。在《Spring 3.X企业应用开发实战》一书中，更是形象地把BeanFactory比喻为发动机，把ApplicationContext比喻为汽车，BeanFactory是核心，而ApplicationContext是在BeanFactory上组合各种组件，更强大，更易用，接下来，学习ApplicationContext的初始化过程，学习ApplicationContext是怎么在BeanFactory上进行增强的。
 
 ## ApplicationContext继承体系
 先上一张大图，ApplicationContext的继承结构体系。

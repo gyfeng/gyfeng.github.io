@@ -8,7 +8,7 @@ catalog:    true
 tags:
     - Spring
 ---
-> &#8195;&#8195;上篇笔记学习了[Spring从Xml加载Bean Definition的过程](http://blog.codedoge.com/2017/05/07/lesson-spring-source-ioc/)，了解到了Spring是如何将Xml文件中定义的Bean加载到容器中的，今天，将学习Spring是如何将BeanDefinition生成我们所需要Bean的过程。
+> &#8195;&#8195;上篇笔记学习了[Spring从Xml加载Bean Definition的过程](http://blog.codedoge.com/2017/05/08/lesson-spring-source-beandefinitionreader/)，了解到了Spring是如何将Xml文件中定义的Bean加载到容器中的，今天，将学习Spring是如何将BeanDefinition生成我们所需要Bean的过程。
 
 ## Bean创建的时机
 &#8195;&#8195;Spring不会默然自动将BeanDefinition转换我们所需要Bean，而是在调用`getBean`系列方法时再去做Bean初始化的操作，虽然这看起来有点不符合我们的认知，因为在ApplicationContext中可以把单例的Bean提前初始化，在我们手工`getBean`时就已经初始化好了，其实这是在ApplicationContext初始化时，不断调用`getBean`方法将单例的Bean进行了初始化工作，使得我们在使用的时候不用经过繁琐创建过程。(PS:*`DefaultListableBeanFactory。preInstantiateSingletons`方法可以可以预加载单例Bean，`ApplicationContext`中就是调用该方法实现预加载单例Bean的*)  
@@ -316,4 +316,4 @@ registerDisposableBeanIfNecessary(beanName, bean, mbd);
 > 7. **InitializingBean**：实现该接口后，Spring会调用其`afterPropertiesSet`方法进行Bean的额外初始化，当然，也可以指定init-method；
 > 8. **DisposableBean**：当非prototype类型的bean销毁时，会调用`destroy`，一般用于资源的释放操作。
 
-&#8195;&#8195;本节学习的Spring Bean创建知识大概就这么多。从这节中了解到了Spring创建Bean的过程，并且结合前一节的[Spring从Xml加载Bean Definition的过程](http://blog.codedoge.com/2017/05/07/lesson-spring-source-ioc/)，可以了解到BeanFactory及其实现类为整个Spring Ioc搭建了一套功能强大，扩展性非常好的核心骨架，已经具备Ioc的基本功能，但是一些组件还需要手工进行注册（*比如BeanPostProcessor*），使用还稍许麻烦。在此之上，Spring还提供另一个容器接口`ApplicationContext`，在ApplicationContext中简化许多操作，默认注册了很多有用的组件，使得Spring Ioc更加完整和强大，在后面，将会对`ApplicationContext`进行深入学习，了解`ApplicationContext`中是如何帮助我们简化/增强功能操作的。
+&#8195;&#8195;本节学习的Spring Bean创建知识大概就这么多。从这节中了解到了Spring创建Bean的过程，并且结合前一节的[Spring从Xml加载Bean Definition的过程](http://blog.codedoge.com/2017/05/08/lesson-spring-source-beandefinitionreader/)，可以了解到BeanFactory及其实现类为整个Spring Ioc搭建了一套功能强大，扩展性非常好的核心骨架，已经具备Ioc的基本功能，但是一些组件还需要手工进行注册（*比如BeanPostProcessor*），使用还稍许麻烦。在此之上，Spring还提供另一个容器接口`ApplicationContext`，在ApplicationContext中简化许多操作，默认注册了很多有用的组件，使得Spring Ioc更加完整和强大，在后面，将会对`ApplicationContext`进行深入学习，了解`ApplicationContext`中是如何帮助我们简化/增强功能操作的。
