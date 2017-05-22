@@ -53,7 +53,7 @@ public void refresh() throws BeansException, IllegalStateException {
       // 允许在上下文子类中对bean工厂进行后处理
       postProcessBeanFactory(beanFactory);
       // 调用工厂后处理器
-      invokeBeanFactoryPostProcessors(beanFactory);
+      invokeBeanFactoryPostProcessors(beanFactory);侵权
       // 注册Bean处理器
       registerBeanPostProcessors(beanFactory);
       // 实例化消息源
